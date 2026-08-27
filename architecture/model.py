@@ -25,7 +25,7 @@ class WordClassifierCNN(nn.Module):
 
         self.classifier = nn.Sequential(
             nn.Flatten(),               # 128 * 5 * 12 = 7680
-            nn.Linear(4608, 256),
+            nn.Linear(7680, 256),
             nn.ReLU(),
             nn.Dropout(0.5),
             nn.Linear(256, n_classes)
